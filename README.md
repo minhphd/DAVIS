@@ -8,8 +8,8 @@ Designing a generalist scientific agent capable of performing tasks in laborator
 ### Steps
 1. **Clone the Repository**
    ```
-   git clone https:/<REDACTED>/ReasonPlanner
-   cd ReasonPlanner
+   git clone https:/<REDACTED>/DAVIS
+   cd DAVIS
    ```
 
 2. **Install Dependencies (Python 3.11.0)**
