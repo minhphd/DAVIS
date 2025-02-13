@@ -1,0 +1,15 @@
+# config.ini
+
+[DEFAULT]
+OCTOML_API_KEY = #[OCTOML API KEY HERE]
+LLM_API_KEY = #[OPENAI API KEY HERE]s
+
+# note: the original code using azure open ai. Please modify ReasoningAgent.py and KnowledgeGraph.py to use OpenAI if you don't have azure account set up.
+AZURE_API_KEY = 
+AZURE_API_VER = 
+AZURE_ENDPOINT = 
+
+[DB]
+DB_NAME = 
+DB_USER = 
+DB_PASS = 

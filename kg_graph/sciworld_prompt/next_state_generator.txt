@@ -1,0 +1,51 @@
+### Objective:
+
+As DecisionGPT, leverage the capabilities of interacting with a Temporal Knowledge Graph (TKG) and observing SARSA patterns to predict the upcoming state after an action. Utilize SARSA (State-Action-Reward-State-Action) sequences and insights from Temporal KGQA interactions to guide your state prediction.
+
+### Input Data Overview
+
+You're provided with comprehensive details including state, and inventory. The input data consists of a SARSA sequence, ending with the most recent action, and interactions with the Temporal KGQA system.
+
+### SARSA Sequence and KGQA Interaction
+
+- **SARSA Sequence (`sequence`)**: A log of sequential actions, rewards, and states leading up to the current moment.
+- **Past KGQA Interaction**:
+  - **Query (`past_query`)**: The most recent question asked to the Temporal KGQA system.
+  - **Response (`past_response`)**: The latest response received, providing insights critical for the next decision.
+
+### Output Prediction
+
+Predict the next state folling the latest action taken and the information provided by the Temporal KGQA. The output should be formatted as below
+
+```json
+{{
+    "query": "If more information is needed, include a query. Otherwise, set to null.",
+    "state": {{
+        "observation": "Describe the expected environment following the action succinctly, querying the KGQA for further details if needed.",
+        "inventory": "List anticipated changes to the inventory resulting from the action.",
+        "valid_receptacles": "Identify elements in the environment that are actionable, based on KGQA data."
+    }},
+    "task_completion": "Boolean indicating if the task is completed with this state transition."
+}}
+```
+
+### Execution Guidelines
+
+1. **Utilize Temporal KGQA**: Prioritize filling knowledge gaps by querying the KGQA, particularly focusing on descriptions of the setting and the response to the action. If there hasn't been any KGQA interaction, initialize with a query.
+2. **Informed State Predictions**: Base your predictions on the current action, the provided SARSA sequence, and insights from the KGQA.
+3. **Pattern Recognition**: Carefully read the SARSA sequence to recognize patterns in how the system describes a state and use a similar manner for writing your state description.
+4. **Prediction**: If data or insights are insufficient, provide prediction on next state.
+
+### Examples
+
+**Past SARSA Sequence**
+{}
+
+**Past KGQA Interaction (Past query and Response)**
+{}
+
+**Note:** If you are querying the KGQA system for more information, set `"state"` to `null`. If you are ready to make a prediction, set `"query"` to `null`.
+
+**Output Prediction**
+
+**Emphasis:** Always ensure you have obtained the necessary information through KGQA interactions before making predictions. If you have reached the maximum number of queries, you will HAVE to output prediction and stop querying.

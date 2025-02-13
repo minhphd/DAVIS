@@ -1,0 +1,16 @@
+AGENT:
+  AGENT_MODEL: gpt-4o
+  ENABLE_LOGGING: true
+  ENVIRONMENT: ScienceWorld
+  ID: 
+    - 74357c0c-91d1-458f-a2b6-10f19095d91f
+    # - abe66665-4eba-472d-9895-cf8b5ed1a315
+    - 76120b32-7720-4a64-9d8f-23c9d305348c
+    # - e12eaaa9-dc49-4501-8ae5-e415b10ff58f
+    # - e12eaaa9-dc49-4501-8ae5-e415b10ff58f
+  KNOWLEDGE_GRAPH_MODEL: gpt-4-turbo
+  SEED: 04901
+EXPERIMENT:
+  TEST_SIZE: 200
+  NUM_AGENTS: 2
+  PREDICTION_PATH: hotpot_results/

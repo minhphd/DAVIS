@@ -1,0 +1,37 @@
+AGENT:
+  SEED: 04901
+  MAX_LOOK_AHEAD: 5
+  MAX_QUERY: 3
+  AGENT_MODEL: gpt-4-turbo
+  KNOWLEDGE_GRAPH_MODEL: meta-llama-3-70b-instruct  # Model used for the knowledge graph
+  ENVIRONMENT: ScienceWorld  # Name of the environment
+  USE_TEMPORAL_KG: true  # Whether to use a temporal knowledge graph
+  USE_ACTOR_CRITIC: true  # Whether to use the reflect and adapt module
+  ENABLE_LOGGING: true  # Enable or disable logging
+  ID: ec079b89-e88e-484d-a8e8-2594e3ca89a2 #agent id, create your own and remember it
+
+EXPERIMENT:
+  NUM_AGENTS: 3
+  MAX_STEPS: 80  # Maximum number of steps in an experiment
+  NUM_EPS: 10
+  SET: test_mini
+  SIMPLIFICATION: easy
+  PLOT_RESULTS: true  # Whether to plot results after the experiment
+  RESULTS_PATH: results/  # Path to save the results
+  
+  #POSSIBLE BUG IN ELECTRICAL TASK
+
+  #LONG TASK
+  TASKS : ["boil","melt","freeze","change-the-state-of-matter-of","measure-melting-point-unknown-substance","grow-plant","grow-fruit","inclined-plane-determine-angle","inclined-plane-friction-named-surfaces","inclined-plane-friction-unnamed-surfaces","mendelian-genetics-known-plant","mendelian-genetics-unknown-plant"]
+  # TASKS : ["boil","melt","freeze","change-the-state-of-matter-of","grow-plant","grow-fruit","inclined-plane-determine-angle","mendelian-genetics-known-plant","mendelian-genetics-unknown-plant"]
+
+
+  #MEDIUM TASK
+  # TASKS : ["use-thermometer","measure-melting-point-known-substance","power-component-renewable-vs-nonrenewable-energy","test-conductivity","test-conductivity-of-unknown-substances","chemistry-mix","chemistry-mix-paint-tertiary-color","identify-life-stages-1"]
+
+  #SHORT TASK
+  # TASKS: ["find-living-thing", "find-non-living-thing", "find-plant","find-animal","chemistry-mix-paint-secondary-color","lifespan-longest-lived","lifespan-shortest-lived","lifespan-longest-lived-then-shortest-lived","identify-life-stages-2"]
+
+  # TASKS: ["find-non-living-thing"]
+
+  # TASKS: ["lifespan-longest-lived-then-shortest-lived","identify-life-stages-2"]
