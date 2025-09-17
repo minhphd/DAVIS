@@ -51,7 +51,7 @@ Designing a generalist scientific agent capable of performing tasks in laborator
 6. **Run the Experiments (COSTLY)**
 
 > [!CAUTION]
-> Ensure you have at least $50 of OpenAI credits available. Short tasks typically take up to 5 minutes, while long tasks can take up to an hour. **Full 90 variations over 30 tasks will take up to $2000 of credits.**
+> Ensure you have at least $50 of OpenAI credits available. Short tasks typically take up to 5 minutes, while long tasks can take up to an hour. **Full 90 variations over 30 tasks using GPT-4-Turbo model will cost over $2000 of credits.**
 
    ```bash
    python ExperimentRunner.py
